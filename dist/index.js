@@ -16,7 +16,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\nconst hello = \"henlo\";\nconsole.log(hello);\n\n\n//# sourceURL=webpack://weather-app/./src/index.ts?");
+eval("\nconst searchBar = document.querySelector(\".card-input\");\nconst locationName = document.querySelector(\".location-name\");\nsearchBar.addEventListener(\"keydown\", (e) => {\n    if (e.key !== \"Enter\")\n        return;\n    fetchWeather(searchBar.value);\n});\nfunction fetchWeather(location = \"Istanbul\", units = \"metric\") {\n    const API_URL = \"https://api.openweathermap.org/data/2.5/weather?\";\n    const API_KEY = \"7f7de09e94384bb2128bd49ebdbced3c\";\n    fetch(`${API_URL}appid=${API_KEY}&q=${location}&units=${units}`)\n        .then((res) => console.log(res.json()))\n        .catch((err) => console.log(err));\n}\n\n\n//# sourceURL=webpack://weather-app/./src/index.ts?");
 
 /***/ })
 
