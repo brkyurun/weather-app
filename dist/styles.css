@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 :root {
   --font-color: #1f2937;
@@ -62,4 +62,37 @@ body {
 .card-input:focus {
   border: transparent;
   outline: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  width: 100%;
+}
+
+.location-name {
+  margin-top: 0.625rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.location-weather,
+.location-description {
+  text-align: center;
+}
+
+.card-information-grid {
+  display: grid;
+  grid-template-columns: 1fr, 2fr;
+  justify-items: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-information-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+p.card-information-text > span {
+  margin-left: 0.5rem;
+  font-weight: bold;
 }
