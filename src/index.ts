@@ -46,9 +46,11 @@ function updateUI(weatherData: any) {
   locationName.textContent = weatherData.name;
   locationWeather.textContent = weatherData.weather[0].main;
   locationDescription.textContent = weatherData.weather[0].description;
-  weatherCurrent.textContent = weatherData.main.temp;
-  weatherFeel.textContent = weatherData.main.feels_like;
+  weatherCurrent.textContent = `${Number(weatherData.main.temp).toFixed(1)} °C`;
+  weatherFeel.textContent = `${Number(weatherData.main.feels_like).toFixed(
+    1
+  )} °C`;
   weatherPressure.textContent = weatherData.main.pressure;
   weatherHumidity.textContent = `${weatherData.main.humidity}%`;
-  weatherWindSpeed.textContent = weatherData.wind.speed;
+  weatherWindSpeed.textContent = `${weatherData.wind.speed} km/h`;
 }
